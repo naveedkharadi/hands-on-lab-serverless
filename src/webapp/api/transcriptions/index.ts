@@ -2,7 +2,7 @@ import { URL } from 'node:url';
 import { Context, HttpRequest, HttpResponse } from "@azure/functions";
 
 const transcriptionFetchingUrl = process.env.TRANSCRIPTION_FETCHING_URL;
-const pageSize = +process.env.TRANSCRIPTIONS_PAGE_SIZE || 50;
+const pageSize = +process.env.TRANSCRIPTIONS_PAGE_SIZE || 10;
 
 export default async function (context: Context, req: HttpRequest): Promise<HttpResponse> {
     try {
